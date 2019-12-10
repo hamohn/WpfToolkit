@@ -355,71 +355,71 @@
 
     <!--  layoutPrimitivesToolkit:ExpandableContentControl  -->
     <Style TargetType="layoutPrimitivesToolkit:ExpandableContentControl">
-    <Setter Property="IsEnabled" Value="true" />
-    <Setter Property="Cursor" Value="Arrow" />
-    <Setter Property="IsTabStop" Value="False" />
-    <Setter Property="BorderThickness" Value="0" />
-    <Setter Property="Padding" Value="0" />
-    <Setter Property="HorizontalContentAlignment" Value="Left" />
-    <Setter Property="VerticalContentAlignment" Value="Top" />
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="layoutPrimitivesToolkit:ExpandableContentControl">
-          <ContentPresenter x:Name="ContentSite" Cursor="{TemplateBinding Cursor}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="0" ContentTemplate="{TemplateBinding ContentTemplate}" />
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+        <Setter Property="IsEnabled" Value="true" />
+        <Setter Property="Cursor" Value="Arrow" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Top" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="layoutPrimitivesToolkit:ExpandableContentControl">
+                    <ContentPresenter x:Name="ContentSite" Cursor="{TemplateBinding Cursor}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="0" ContentTemplate="{TemplateBinding ContentTemplate}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <!--  layoutToolkit:Accordion  -->
     <Style TargetType="layoutToolkit:Accordion">
-    <Setter Property="Foreground" Value="#FF000000" />
-    <Setter Property="BorderBrush" Value="#FFEAEAEA" />
-    <Setter Property="HorizontalAlignment" Value="Left" />
-    <Setter Property="VerticalAlignment" Value="Top" />
-    <Setter Property="HorizontalContentAlignment" Value="Left" />
-    <Setter Property="VerticalContentAlignment" Value="Top" />
-    <Setter Property="Cursor" Value="Arrow" />
-    <Setter Property="BorderThickness" Value="1" />
-    <Setter Property="Padding" Value="0" />
-    <Setter Property="Margin" Value="0" />
-    <Setter Property="IsTabStop" Value="False" />
-    <!-- Accordion expects a stackpanel to layout its children. -->
-    <Setter Property="ItemsPanel">
-      <Setter.Value>
-        <ItemsPanelTemplate>
-          <StackPanel VerticalAlignment="Top" />
-        </ItemsPanelTemplate>
-      </Setter.Value>
-    </Setter>
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="layoutToolkit:Accordion">
-          <Grid x:Name="Root">
-            <VisualStateManager.VisualStateGroups>
-              <!-- common states -->
-              <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="Normal" />
-                <VisualState x:Name="Pressed" />
-                <VisualState x:Name="MouseOver" />
-                <VisualState x:Name="Disabled" />
-              </VisualStateGroup>
-              <!-- focus states -->
-              <VisualStateGroup x:Name="FocusStates">
-                <VisualState x:Name="Focused" />
-                <VisualState x:Name="Unfocused" />
-              </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-            <Border x:Name="Border" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
-              <ScrollViewer IsTabStop="False" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" Background="{x:Null}" BorderBrush="Transparent" Margin="0" Padding="0" BorderThickness="0">
-                <ItemsPresenter />
-              </ScrollViewer>
-              </Border>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+        <Setter Property="Foreground" Value="#FF000000" />
+        <Setter Property="BorderBrush" Value="#FFEAEAEA" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Top" />
+        <Setter Property="Cursor" Value="Arrow" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="IsTabStop" Value="False" />
+        <!-- Accordion expects a stackpanel to layout its children. -->
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel VerticalAlignment="Top" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="layoutToolkit:Accordion">
+                    <Grid x:Name="Root">
+                        <VisualStateManager.VisualStateGroups>
+                            <!-- common states -->
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Pressed" />
+                                <VisualState x:Name="MouseOver" />
+                                <VisualState x:Name="Disabled" />
+                            </VisualStateGroup>
+                            <!-- focus states -->
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused" />
+                                <VisualState x:Name="Unfocused" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="Border" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
+                            <ScrollViewer IsTabStop="False" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" Background="{x:Null}" BorderBrush="Transparent" Margin="0" Padding="0" BorderThickness="0">
+                                <ItemsPresenter />
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <!--  layoutToolkit:AccordionItem  -->
     <Style TargetType="layoutToolkit:AccordionItem">
@@ -436,8 +436,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="layoutToolkit:AccordionItem">
-                    <!-- Background="{TemplateBinding Background}"  -->
-                    <Grid Background="Blue" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                    <Grid Background="{TemplateBinding Background}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
                         <VisualStateManager.VisualStateGroups>
                             <!-- CommonState -->
                             <VisualStateGroup x:Name="CommonStates">
@@ -708,7 +707,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <!--  layoutToolkit:TransitioningContentControl  -->
     <Style TargetType="layoutToolkit:TransitioningContentControl">
         <Setter Property="IsTabStop" Value="True" />
